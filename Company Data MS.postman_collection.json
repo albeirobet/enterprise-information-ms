@@ -1,0 +1,133 @@
+{
+	"info": {
+		"_postman_id": "308adc6b-bee4-47a0-975f-52dd6fe3814d",
+		"name": "Company Data MS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Company",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmYTJmZWYxZGZkNWE5MDAxN2QyNzBjMyIsImF1dGhvcml0aWVzIjpbInVzZXIiXSwiZW1haWwiOiJlYWFyMjNAZ21haWwuY29tIiwibmFtZSI6IkVZREVSIiwiaWF0IjoxNjA0NzAwMTA5LCJleHAiOjE2MTI0NzYxMDl9.kbNgRmVxHOyJnPJdWCnNcO6rX_et5SSFRYzgLYkPGLs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"identificationType\": \"NIT\",\r\n    \"identificationNumber\": \"900903500\",\r\n    \"name\": \"CompuMundo Hipermegared\",\r\n    \"principalAddress\": \"Calle 169 #16-70\",\r\n    \"secondaryAddress\": \"CARRERA 25 10 105\",\r\n    \"email\": \"compumundo@novacode.co\",\r\n    \"phoneNumber\": \"3208095046\",\r\n    \"nameContactPerson\": \"3125950164\",\r\n    \"logoUrl\": \"https://runcode.co/wp-content/uploads/2016/04/runcode_cubo.png\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://enterprise-information-ms.herokuapp.com/api/v1/company-data/create",
+					"protocol": "https",
+					"host": [
+						"enterprise-information-ms",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"company-data",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllCompanies",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmYTJmZWYxZGZkNWE5MDAxN2QyNzBjMyIsImF1dGhvcml0aWVzIjpbInVzZXIiXSwiZW1haWwiOiJlYWFyMjNAZ21haWwuY29tIiwibmFtZSI6IkVZREVSIiwiaWF0IjoxNjA0NzAwMTA5LCJleHAiOjE2MTI0NzYxMDl9.kbNgRmVxHOyJnPJdWCnNcO6rX_et5SSFRYzgLYkPGLs",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://enterprise-information-ms.herokuapp.com/api/v1/company-data/getAllCompanies",
+					"protocol": "https",
+					"host": [
+						"enterprise-information-ms",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"company-data",
+						"getAllCompanies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateCompnay",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"_id\": \"5fa5a8b3414c3f07289f6991\",\r\n    \"name\": \"RUNCODE INGENIERÍA SAS EDITED\",\r\n    \"principalAddress\": \"CALLE 169 #16-70 edited\",\r\n    \"identificationType\": \"NIT\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://enterprise-information-ms.herokuapp.com/api/v1/company-data/update",
+					"protocol": "https",
+					"host": [
+						"enterprise-information-ms",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"company-data",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCompanyByID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://enterprise-information-ms.herokuapp.com/api/v1/company-data/getCompany/5fa5bf8b78f2f9479c799780",
+					"protocol": "https",
+					"host": [
+						"enterprise-information-ms",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"company-data",
+						"getCompany",
+						"5fa5bf8b78f2f9479c799780"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
