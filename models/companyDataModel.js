@@ -72,6 +72,14 @@ const companyDataSchema = new mongoose.Schema({
   logoUrl: {
     type: String,
     required: false
+  },
+  reportsUploader: { 
+    type : Array , 
+    "default" : [] 
+  },
+  reportsGenerate: { 
+    type : Array , 
+    "default" : [] 
   }
 });
 
