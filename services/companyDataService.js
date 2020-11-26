@@ -48,7 +48,9 @@ exports.updateCompanyData = async (req, res) => {
     'email',
     'phoneNumber',
     'nameContactPerson',
-    'logoUrl'
+    'logoUrl',
+    'reportsUploader',
+    'reportsGenerate'
   );
 
   // 2) Update company document
